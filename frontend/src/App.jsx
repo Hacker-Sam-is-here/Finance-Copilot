@@ -95,7 +95,7 @@ function App() {
       <header className="header">
         <div className="header-content">
           <h1>Bharat AI Finance Copilot</h1>
-          <p className="subtitle">Your smart financial guide in simple language</p>
+          <p className="subtitle">Understand money. Make better decisions.</p>
         </div>
         
         <div className="profile-bar">
@@ -171,6 +171,34 @@ function App() {
             </div>
           </div>
         )}
+        
+        {messages.length === 1 && !loading && (
+          <div className="starter-state">
+            <div className="starter-section">
+              <h3>💡 Try asking:</h3>
+              <div className="starter-chips">
+                <button onClick={() => sendMessage("Mere paas ₹1 lakh hai, kya karu?", false)}>Mere paas ₹1 lakh hai, kya karu?</button>
+                <button onClick={() => sendMessage("How to save from 50k salary?", false)}>How to save from 50k salary?</button>
+                <button onClick={() => sendMessage("FD vs mutual fund?", false)}>FD vs mutual fund?</button>
+              </div>
+            </div>
+            
+            <div className="starter-section">
+              <h3>📈 Projected Growth</h3>
+              <div className="projection-preview-card">
+                <div className="preview-header">If you invest ₹1,00,000 at 8.5%</div>
+                <div className="preview-body">
+                  <span className="projection-icon">📈</span>
+                  <span className="projection-text"><strong>₹1,50,365</strong> in 5 years</span>
+                </div>
+                <div className="preview-footer">
+                  That's ~50% growth over 5 years ✨
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+        
         <div ref={messagesEndRef} />
       </div>
 

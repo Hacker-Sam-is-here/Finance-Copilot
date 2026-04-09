@@ -222,6 +222,88 @@ body {
   letter-spacing: 0.3px;
 }
 
+/* Starter State Layout */
+.starter-state {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  margin-top: 10px;
+  padding: 0 10px;
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.starter-section h3 {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin: 0 0 12px 0;
+  font-weight: 500;
+}
+
+.starter-chips {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.starter-chips button {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--card-border);
+  color: var(--text-main);
+  padding: 14px 18px;
+  border-radius: 12px;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.starter-chips button:hover {
+  background: rgba(99, 102, 241, 0.1);
+  border-color: #6366f1;
+  transform: translateX(4px);
+}
+
+.projection-preview-card {
+  background: linear-gradient(145deg, rgba(16, 185, 129, 0.05), rgba(16, 185, 129, 0.15));
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  border-radius: 16px;
+  padding: 16px 20px;
+  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.05);
+}
+
+.preview-header {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+}
+
+.preview-body {
+  display: flex;
+  align-items: center;
+}
+
+.preview-body .projection-text {
+  font-size: 1.15rem;
+  color: #34d399;
+  font-weight: 500;
+}
+
+.preview-body .projection-text strong {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #6ee7b7;
+  text-shadow: 0 0 15px rgba(52, 211, 153, 0.5);
+}
+
+.preview-footer {
+  margin-top: 10px;
+  font-size: 0.85rem;
+  color: #10b981;
+  opacity: 0.9;
+  font-weight: 500;
+}
+
 /* Risk Confidence Badges */
 .risk-badge {
   display: inline-flex;
@@ -310,8 +392,8 @@ body {
   border: 1px solid var(--card-border);
   color: var(--text-muted);
   border-radius: 24px;
-  padding: 10px 20px;
-  font-size: 0.9rem;
+  padding: 12px 24px;
+  font-size: 0.95rem;
   font-weight: 500;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -352,7 +434,7 @@ input[type="text"]::placeholder {
 input[type="text"]:focus {
   border-color: #8b5cf6;
   background: rgba(30, 41, 59, 0.9);
-  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.2), inset 0 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 15px rgba(139, 92, 246, 0.3), inset 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .send-btn {
